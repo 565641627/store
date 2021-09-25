@@ -46,9 +46,9 @@ c3 = chef()
 c1.setDaemon(True)
 c2.setDaemon(True)
 c3.setDaemon(True)
-c1.name = '李奇明'
-c2.name = '熊鑫'
-c3.name = '关欣'
+c1.name = '李主厨'
+c2.name = '熊副厨'
+c3.name = '关学徒'
 ct1 = client()
 ct2 = client()
 ct3 = client()
