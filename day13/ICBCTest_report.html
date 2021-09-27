@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>这是一份工商银行的测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>这是一份工商银行的测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2021-09-27 17:26:07</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.013998</p>
+<p class='attribute'><strong>Status:</strong> Pass 109 Failure 12</p>
+
+<p class='description'>这是主要功能的测试报告</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestICBC.TestICBC</td>
+    <td>101</td>
+    <td>100</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',101)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_001___ezreal1___123456_0___瓦罗兰____战争学院____魔法城____a1110___6300_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_002___ezreal1___123457_0___瓦罗兰____战争学院____魔法城____a1111___6301_0__2_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_003___ezreal3___123458_0___瓦罗兰____战争学院____魔法城____a1112___6302_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_004___ezreal4___123459_0___瓦罗兰____战争学院____魔法城____a1113___6303_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_005___ezreal5___123460_0___瓦罗兰____战争学院____魔法城____a1114___6304_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_006___ezreal6___123461_0___瓦罗兰____战争学院____魔法城____a1115___6305_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_007___ezreal7___123462_0___瓦罗兰____战争学院____魔法城____a1116___6306_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_008___ezreal8___123463_0___瓦罗兰____战争学院____魔法城____a1117___6307_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_009___ezreal9___123464_0___瓦罗兰____战争学院____魔法城____a1118___6308_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_010___ezreal10___123465_0___瓦罗兰____战争学院____魔法城____a1119___6309_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_011___ezreal11___123466_0___瓦罗兰____战争学院____魔法城____a1120___6310_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_012___ezreal12___123467_0___瓦罗兰____战争学院____魔法城____a1121___6311_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_013___ezreal13___123468_0___瓦罗兰____战争学院____魔法城____a1122___6312_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_014___ezreal14___123469_0___瓦罗兰____战争学院____魔法城____a1123___6313_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_015___ezreal15___123470_0___瓦罗兰____战争学院____魔法城____a1124___6314_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_016___ezreal16___123471_0___瓦罗兰____战争学院____魔法城____a1125___6315_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_017___ezreal17___123472_0___瓦罗兰____战争学院____魔法城____a1126___6316_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_018___ezreal18___123473_0___瓦罗兰____战争学院____魔法城____a1127___6317_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_019___ezreal19___123474_0___瓦罗兰____战争学院____魔法城____a1128___6318_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.20' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_020___ezreal20___123475_0___瓦罗兰____战争学院____魔法城____a1129___6319_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_021___ezreal21___123476_0___瓦罗兰____战争学院____魔法城____a1130___6320_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_022___ezreal22___123477_0___瓦罗兰____战争学院____魔法城____a1131___6321_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.23' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_023___ezreal23___123478_0___瓦罗兰____战争学院____魔法城____a1132___6322_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.24' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_024___ezreal24___123479_0___瓦罗兰____战争学院____魔法城____a1133___6323_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_025___ezreal25___123480_0___瓦罗兰____战争学院____魔法城____a1134___6324_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.26' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_026___ezreal26___123481_0___瓦罗兰____战争学院____魔法城____a1135___6325_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.27' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_027___ezreal27___123482_0___瓦罗兰____战争学院____魔法城____a1136___6326_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.28' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_028___ezreal28___123483_0___瓦罗兰____战争学院____魔法城____a1137___6327_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.29' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_029___ezreal29___123484_0___瓦罗兰____战争学院____魔法城____a1138___6328_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.30' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_030___ezreal30___123485_0___瓦罗兰____战争学院____魔法城____a1139___6329_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.31' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_031___ezreal31___123486_0___瓦罗兰____战争学院____魔法城____a1140___6330_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.32' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_032___ezreal32___123487_0___瓦罗兰____战争学院____魔法城____a1141___6331_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.33' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_033___ezreal33___123488_0___瓦罗兰____战争学院____魔法城____a1142___6332_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.34' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_034___ezreal34___123489_0___瓦罗兰____战争学院____魔法城____a1143___6333_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.35' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_035___ezreal35___123490_0___瓦罗兰____战争学院____魔法城____a1144___6334_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.36' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_036___ezreal36___123491_0___瓦罗兰____战争学院____魔法城____a1145___6335_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.37' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_037___ezreal37___123492_0___瓦罗兰____战争学院____魔法城____a1146___6336_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.38' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_038___ezreal38___123493_0___瓦罗兰____战争学院____魔法城____a1147___6337_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.39' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_039___ezreal39___123494_0___瓦罗兰____战争学院____魔法城____a1148___6338_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.40' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_040___ezreal40___123495_0___瓦罗兰____战争学院____魔法城____a1149___6339_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.41' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_041___ezreal41___123496_0___瓦罗兰____战争学院____魔法城____a1150___6340_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.42' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_042___ezreal42___123497_0___瓦罗兰____战争学院____魔法城____a1151___6341_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.43' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_043___ezreal43___123498_0___瓦罗兰____战争学院____魔法城____a1152___6342_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.44' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_044___ezreal44___123499_0___瓦罗兰____战争学院____魔法城____a1153___6343_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.45' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_045___ezreal45___123500_0___瓦罗兰____战争学院____魔法城____a1154___6344_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.46' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_046___ezreal46___123501_0___瓦罗兰____战争学院____魔法城____a1155___6345_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.47' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_047___ezreal47___123502_0___瓦罗兰____战争学院____魔法城____a1156___6346_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.48' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_048___ezreal48___123503_0___瓦罗兰____战争学院____魔法城____a1157___6347_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.49' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_049___ezreal49___123504_0___瓦罗兰____战争学院____魔法城____a1158___6348_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.50' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_050___ezreal50___123505_0___瓦罗兰____战争学院____魔法城____a1159___6349_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.51' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_051___ezreal51___123506_0___瓦罗兰____战争学院____魔法城____a1160___6350_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.52' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_052___ezreal52___123507_0___瓦罗兰____战争学院____魔法城____a1161___6351_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.53' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_053___ezreal53___123508_0___瓦罗兰____战争学院____魔法城____a1162___6352_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.54' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_054___ezreal54___123509_0___瓦罗兰____战争学院____魔法城____a1163___6353_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.55' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_055___ezreal55___123510_0___瓦罗兰____战争学院____魔法城____a1164___6354_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.56' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_056___ezreal56___123511_0___瓦罗兰____战争学院____魔法城____a1165___6355_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.57' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_057___ezreal57___123512_0___瓦罗兰____战争学院____魔法城____a1166___6356_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.58' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_058___ezreal58___123513_0___瓦罗兰____战争学院____魔法城____a1167___6357_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.59' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_059___ezreal59___123514_0___瓦罗兰____战争学院____魔法城____a1168___6358_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.60' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_060___ezreal60___123515_0___瓦罗兰____战争学院____魔法城____a1169___6359_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.61' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_061___ezreal61___123516_0___瓦罗兰____战争学院____魔法城____a1170___6360_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.62' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_062___ezreal62___123517_0___瓦罗兰____战争学院____魔法城____a1171___6361_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.63' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_063___ezreal63___123518_0___瓦罗兰____战争学院____魔法城____a1172___6362_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.64' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_064___ezreal64___123519_0___瓦罗兰____战争学院____魔法城____a1173___6363_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.65' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_065___ezreal65___123520_0___瓦罗兰____战争学院____魔法城____a1174___6364_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.66' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_066___ezreal66___123521_0___瓦罗兰____战争学院____魔法城____a1175___6365_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.67' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_067___ezreal67___123522_0___瓦罗兰____战争学院____魔法城____a1176___6366_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.68' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_068___ezreal68___123523_0___瓦罗兰____战争学院____魔法城____a1177___6367_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.69' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_069___ezreal69___123524_0___瓦罗兰____战争学院____魔法城____a1178___6368_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.70' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_070___ezreal70___123525_0___瓦罗兰____战争学院____魔法城____a1179___6369_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.71' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_071___ezreal71___123526_0___瓦罗兰____战争学院____魔法城____a1180___6370_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.72' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_072___ezreal72___123527_0___瓦罗兰____战争学院____魔法城____a1181___6371_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.73' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_073___ezreal73___123528_0___瓦罗兰____战争学院____魔法城____a1182___6372_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.74' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_074___ezreal74___123529_0___瓦罗兰____战争学院____魔法城____a1183___6373_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.75' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_075___ezreal75___123530_0___瓦罗兰____战争学院____魔法城____a1184___6374_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.76' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_076___ezreal76___123531_0___瓦罗兰____战争学院____魔法城____a1185___6375_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.77' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_077___ezreal77___123532_0___瓦罗兰____战争学院____魔法城____a1186___6376_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.78' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_078___ezreal78___123533_0___瓦罗兰____战争学院____魔法城____a1187___6377_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.79' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_079___ezreal79___123534_0___瓦罗兰____战争学院____魔法城____a1188___6378_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.80' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_080___ezreal80___123535_0___瓦罗兰____战争学院____魔法城____a1189___6379_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.81' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_081___ezreal81___123536_0___瓦罗兰____战争学院____魔法城____a1190___6380_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.82' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_082___ezreal82___123537_0___瓦罗兰____战争学院____魔法城____a1191___6381_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.83' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_083___ezreal83___123538_0___瓦罗兰____战争学院____魔法城____a1192___6382_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.84' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_084___ezreal84___123539_0___瓦罗兰____战争学院____魔法城____a1193___6383_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.85' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_085___ezreal85___123540_0___瓦罗兰____战争学院____魔法城____a1194___6384_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.86' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_086___ezreal86___123541_0___瓦罗兰____战争学院____魔法城____a1195___6385_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.87' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_087___ezreal87___123542_0___瓦罗兰____战争学院____魔法城____a1196___6386_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.88' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_088___ezreal88___123543_0___瓦罗兰____战争学院____魔法城____a1197___6387_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.89' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_089___ezreal89___123544_0___瓦罗兰____战争学院____魔法城____a1198___6388_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.90' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_090___ezreal90___123545_0___瓦罗兰____战争学院____魔法城____a1199___6389_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.91' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_091___ezreal91___123546_0___瓦罗兰____战争学院____魔法城____a1200___6390_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.92' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_092___ezreal92___123547_0___瓦罗兰____战争学院____魔法城____a1201___6391_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.93' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_093___ezreal93___123548_0___瓦罗兰____战争学院____魔法城____a1202___6392_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.94' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_094___ezreal94___123549_0___瓦罗兰____战争学院____魔法城____a1203___6393_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.95' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_095___ezreal95___123550_0___瓦罗兰____战争学院____魔法城____a1204___6394_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.96' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_096___ezreal96___123551_0___瓦罗兰____战争学院____魔法城____a1205___6395_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.97' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_097___ezreal97___123552_0___瓦罗兰____战争学院____魔法城____a1206___6396_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.98' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_098___ezreal98___123553_0___瓦罗兰____战争学院____魔法城____a1207___6397_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.99' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_099___ezreal99___123554_0___瓦罗兰____战争学院____魔法城____a1208___6398_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt1.100' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser_100___ezreal100___123555_0___瓦罗兰____战争学院____魔法城____a1209___6399_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft1.101' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser_101___ezreal101___123556_0___瓦罗兰____战争学院____魔法城____a1210___6400_0__3_0_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.101')" >
+        fail</a>
+
+    <div id='div_ft1.101' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.101').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.101: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 58, in testAddUser
+    self.assertEqual(s, h)
+AssertionError: 1 != 3.0
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestICBC.TestICBC1</td>
+    <td>7</td>
+    <td>1</td>
+    <td>6</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',7)">Detail</a></td>
+</tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser1_1__12345678_0__0_0__1_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        fail</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 71, in testAddUser1
+    self.assertEqual(s, c)
+AssertionError: False != 1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser1_2__12345678_0___1_0__0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft2.3' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser1_3__12345680_0__2_0__1_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
+        fail</a>
+
+    <div id='div_ft2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.3: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 71, in testAddUser1
+    self.assertEqual(s, c)
+AssertionError: False != 1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.4' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser1_4__12345681_0__3_0__1_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.4')" >
+        fail</a>
+
+    <div id='div_ft2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.4: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 71, in testAddUser1
+    self.assertEqual(s, c)
+AssertionError: False != 1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.5' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser1_5__12345682_0__4_0__1_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.5')" >
+        fail</a>
+
+    <div id='div_ft2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.5: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 71, in testAddUser1
+    self.assertEqual(s, c)
+AssertionError: False != 1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.6' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser1_6__12345683_0__5_0__1_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.6')" >
+        fail</a>
+
+    <div id='div_ft2.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.6: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 71, in testAddUser1
+    self.assertEqual(s, c)
+AssertionError: False != 1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.7' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser1_7__12345684_0__6_0__1_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.7')" >
+        fail</a>
+
+    <div id='div_ft2.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.7: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 71, in testAddUser1
+    self.assertEqual(s, c)
+AssertionError: False != 1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestICBC.TestICBC2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>2</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',2)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser2_1__12345678_0__123456_0__1_0_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        fail</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: 该用户不存在！
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 84, in testAddUser2
+    self.assertEqual(s, c)
+AssertionError: None != 1.0
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.2' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser2_2__12345680_0__123457_0__1_0_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+        fail</a>
+
+    <div id='div_ft3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.2: 该用户不存在！
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 84, in testAddUser2
+    self.assertEqual(s, c)
+AssertionError: None != 1.0
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestICBC.TestICBC3</td>
+    <td>6</td>
+    <td>5</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',6)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser3_1__12345678_0__123456_0___100_0__0_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser3_2__12345679_0__123457_0__0_0__0_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser3_3__12345680_0__123458_0__100_0__0_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser3_4__12345681_0__123459_0__200_0__0_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft4.5' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser3_5__12345682_0__123460_0__10000_0__3_0_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.5')" >
+        fail</a>
+
+    <div id='div_ft4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.5: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 97, in testAddUser3
+    self.assertEqual(s, d)
+AssertionError: 0 != 3.0
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser3_6__12345683_0__123461_0__60_0__0_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='failClass'>
+    <td>TestICBC.TestICBC4</td>
+    <td>5</td>
+    <td>3</td>
+    <td>2</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',5)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser4_1__12345678_0__12345679_0__123456_0__50_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft5.2' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser4_2__12345679_0__12345680_0__641586527_0__20_0__2_0_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.2')" >
+        fail</a>
+
+    <div id='div_ft5.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.2: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 110, in testAddUser4
+    self.assertEqual(s, e)
+AssertionError: 1 != 2.0
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser4_3__12345680_0__12345681_0__123458_0__0_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testAddUser4_4__12345681_0__12345682_0__123459_0___120_0__1_0_</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft5.5' class='none'>
+    <td class='failCase'><div class='testcase'>testAddUser4_5__12345682_0__12345683_0__123460_0__45311351_0__3_0_</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.5')" >
+        fail</a>
+
+    <div id='div_ft5.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.5: Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+  File "F:\pycharm\Pythonproject\day13\TestICBC.py", line 110, in testAddUser4
+    self.assertEqual(s, e)
+AssertionError: 1 != 3.0
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>121</td>
+    <td>109</td>
+    <td>12</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
